@@ -13,4 +13,8 @@
 <a href="https://github.com/jellyfin/jellyfin-plugin-webhook/releases">
 <img alt="Current Release" src="https://img.shields.io/github/release/crobibero/jellyfin-plugin-lrclib.svg"/>
 </a>
+
+<div align="center">
+  Download Lyrics from https://lrclib.net/
+</div>
 </p>
