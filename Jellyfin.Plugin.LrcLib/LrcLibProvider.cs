@@ -113,6 +113,7 @@ public class LrcLibProvider : ILyricProvider
             var results = new List<RemoteLyricInfo>();
             if (!string.IsNullOrEmpty(response.PlainLyrics))
             {
+                var stream = new MemoryStream(Encoding.UTF8.GetBytes(response.PlainLyrics));
                 results.Add(new RemoteLyricInfo
                 {
                     Id = $"{response.Id}_{PlainSuffix}",
@@ -124,12 +125,18 @@ public class LrcLibProvider : ILyricProvider
                         Title = response.TrackName,
                         Length = TimeSpan.FromSeconds(response.Duration ?? 0).Ticks,
                         IsSynced = false
+                    },
+                    Lyrics = new LyricResponse
+                    {
+                        Format = PlainFormat,
+                        Stream = stream
                     }
                 });
             }
 
             if (!string.IsNullOrEmpty(response.SyncedLyrics))
             {
+                var stream = new MemoryStream(Encoding.UTF8.GetBytes(response.SyncedLyrics));
                 results.Add(new RemoteLyricInfo
                 {
                     Id = $"{response.Id}_{SyncedSuffix}",
@@ -141,6 +148,11 @@ public class LrcLibProvider : ILyricProvider
                         Title = response.TrackName,
                         Length = TimeSpan.FromSeconds(response.Duration ?? 0).Ticks,
                         IsSynced = true
+                    },
+                    Lyrics = new LyricResponse
+                    {
+                        Format = SyncedFormat,
+                        Stream = stream
                     }
                 });
             }
@@ -160,7 +172,7 @@ public class LrcLibProvider : ILyricProvider
     }
 
     /// <inheritdoc />
-    public async Task<LyricResponse> GetLyricsAsync(string id, CancellationToken cancellationToken)
+    public async Task<LyricResponse?> GetLyricsAsync(string id, CancellationToken cancellationToken)
     {
         var splitId = id.Split('_', 2);
 
