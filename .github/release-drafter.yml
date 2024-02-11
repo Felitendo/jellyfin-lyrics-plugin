@@ -1,0 +1,8 @@
+_extends: jellyfin-meta-plugins
+
+template: |
+  <!-- Optional: add a release summary here -->
+
+  ## :sparkles: What's New
+
+  $CHANGES

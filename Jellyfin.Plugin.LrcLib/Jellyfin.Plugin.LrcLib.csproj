@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Nullable>enable</Nullable>
+        <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+        <CodeAnalysisRuleSet>../jellyfin.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="MediaBrowser.Common">
+        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Common.dll</HintPath>
+      </Reference>
+      <Reference Include="MediaBrowser.Controller">
+        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Controller.dll</HintPath>
+      </Reference>
+      <Reference Include="MediaBrowser.Model">
+        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Model.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="SerilogAnalyzer" Version="0.15.0" PrivateAssets="All" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.507" PrivateAssets="All" />
+        <PackageReference Include="SmartAnalyzers.MultithreadingAnalyzer" Version="1.1.31" PrivateAssets="All" />
+    </ItemGroup>
+
+</Project>
