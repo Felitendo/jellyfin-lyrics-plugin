@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>LrcLib</title>
+</head>
+<body>
+    <div id="lrclibConfigurationPage" data-role="page" class="page type-interior pluginConfigurationPage">
+        <div data-role="content">
+            <div class="content-primary">
+                <form class="gotifyConfigurationForm">
+                    <div class="verticalSection verticalSection-extrabottompadding">
+                        <div class="sectionTitleContainer flex align-items-center">
+                            <h2 class="sectionTitle">LrcLib Settings:</h2>
+                        </div>
+                        <label class="checkboxContainer">
+                            <input is="emby-checkbox" type="checkbox" id="useStrictSearch" />
+                            <span>Use strict search.</span>
+                        </label>
+                        <label class="checkboxContainer" id="excludeArtistNameLabel">
+                            <input is="emby-checkbox" type="checkbox" id="excludeArtistName" />
+                            <span>Exclude artist name from the search parameters.</span>
+                        </label>
+                        <label class="checkboxContainer" id="excludeAlbumNameLabel">
+                            <input is="emby-checkbox" type="checkbox" id="excludeAlbumName" />
+                            <span>Exclude album name from the search parameters.</span>
+                        </label>
+                        <br />
+                        <div>
+                            <button is="emby-button" type="submit" data-theme="b" class="raised button-submit block">
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var LrcLibPluginConfiguration = {
+            uniquePluginId: "d106ebe6-9ca8-4fbc-9cd1-a92a213da9f9",
+
+            loadConfiguration: function () {
+                Dashboard.showLoadingMsg();
+
+                ApiClient.getPluginConfiguration(LrcLibPluginConfiguration.uniquePluginId).then(function (config) {
+                    document.querySelector('#useStrictSearch').checked = config.UseStrictSearch;
+
+                    if (config.UseStrictSearch) {
+                        document.querySelector('#excludeArtistNameLabel').classList.add('hide');
+                        document.querySelector('#excludeAlbumNameLabel').classList.add('hide');
+                    }
+
+                    document.querySelector('#excludeArtistName').checked = config.ExcludeArtistName;
+                    document.querySelector('#excludeAlbumName').checked = config.ExcludeAlbumName;
+                    Dashboard.hideLoadingMsg();
+                });
+            },
+
+            saveConfiguration: function () {
+                Dashboard.showLoadingMsg();
+                ApiClient.getPluginConfiguration(LrcLibPluginConfiguration.uniquePluginId).then(function (config) {
+
+                    config.UseStrictSearch = document.querySelector('#useStrictSearch').checked;
+                    config.ExcludeArtistName = document.querySelector('#excludeArtistName').checked;
+                    config.ExcludeAlbumName = document.querySelector('#excludeAlbumName').checked;
+
+                    ApiClient.updatePluginConfiguration(LrcLibPluginConfiguration.uniquePluginId, config).then(function (result) {
+                        Dashboard.processPluginConfigurationUpdateResult(result);
+                    });
+                });
+            },
+        };
+
+        document.getElementById('lrclibConfigurationPage').addEventListener('pageshow', function () {
+            LrcLibPluginConfiguration.loadConfiguration();
+        });
+
+        document.getElementById('lrclibConfigurationPage').addEventListener('submit', function (e) {
+            e.preventDefault();
+            LrcLibPluginConfiguration.saveConfiguration();
+        });
+
+        document.getElementById('useStrictSearch').addEventListener('change', function () {
+
+            if (document.getElementById('useStrictSearch').checked) {
+                document.getElementById('excludeArtistNameLabel').classList.add('hide');
+                document.getElementById('excludeAlbumNameLabel').classList.add('hide');
+            }
+            else {
+                document.getElementById('excludeArtistNameLabel').classList.remove('hide');
+                document.getElementById('excludeAlbumNameLabel').classList.remove('hide');
+            }
+        });
+        </script>
+    </div>
+</body>
+</html>

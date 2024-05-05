@@ -9,6 +9,11 @@
         <CodeAnalysisRuleSet>../jellyfin.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
 
+	<ItemGroup>
+		<None Remove="Configuration\config.html" />
+		<EmbeddedResource Include="Configuration\config.html" />
+	</ItemGroup>
+	
     <ItemGroup>
       <Reference Include="MediaBrowser.Common">
         <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Common.dll</HintPath>

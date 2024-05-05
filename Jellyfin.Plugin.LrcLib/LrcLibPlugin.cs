@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Jellyfin.Plugin.LrcLib.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
@@ -9,7 +11,7 @@ namespace Jellyfin.Plugin.LrcLib;
 /// <summary>
 /// LrcLib plugin.
 /// </summary>
-public class LrcLibPlugin : BasePlugin<BasePluginConfiguration>
+public class LrcLibPlugin : BasePlugin<PluginConfiguration>, IHasWebPages
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="LrcLibPlugin"/> class.
@@ -32,4 +34,14 @@ public class LrcLibPlugin : BasePlugin<BasePluginConfiguration>
     /// Gets the current plugin instance.
     /// </summary>
     public static LrcLibPlugin? Instance { get; private set; }
+
+    /// <inheritdoc />
+    public IEnumerable<PluginPageInfo> GetPages()
+    {
+        yield return new PluginPageInfo
+        {
+            Name = Name,
+            EmbeddedResourcePath = $"{GetType().Namespace}.Configuration.config.html"
+        };
+    }
 }

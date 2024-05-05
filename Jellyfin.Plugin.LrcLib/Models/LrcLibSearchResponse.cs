@@ -35,7 +35,7 @@ public class LrcLibSearchResponse
     /// Gets or sets the duration.
     /// </summary>
     [JsonPropertyName("duration")]
-    public int? Duration { get; set; }
+    public double? Duration { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether this is an instrumental.
