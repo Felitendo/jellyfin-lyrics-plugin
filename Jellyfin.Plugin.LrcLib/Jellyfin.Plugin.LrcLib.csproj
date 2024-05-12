@@ -15,24 +15,15 @@
 	</ItemGroup>
 	
     <ItemGroup>
-      <Reference Include="MediaBrowser.Common">
-        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Common.dll</HintPath>
-      </Reference>
-      <Reference Include="MediaBrowser.Controller">
-        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Controller.dll</HintPath>
-      </Reference>
-      <Reference Include="MediaBrowser.Model">
-        <HintPath>..\..\jellyfin\Jellyfin.Server\bin\Debug\net8.0\MediaBrowser.Model.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
+      <PackageReference Include="Jellyfin.Common" Version="10.*-*" />
+      <PackageReference Include="Jellyfin.Controller" Version="10.*-*" />
+      <PackageReference Include="Jellyfin.Model" Version="10.*-*" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="SerilogAnalyzer" Version="0.15.0" PrivateAssets="All" />
-        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.507" PrivateAssets="All" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="All" />
         <PackageReference Include="SmartAnalyzers.MultithreadingAnalyzer" Version="1.1.31" PrivateAssets="All" />
     </ItemGroup>
 
