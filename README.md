@@ -18,3 +18,6 @@
   Download Lyrics from https://lrclib.net/
 </div>
 </p>
+
+
+Plugin Manifest: https://raw.githubusercontent.com/crobibero/jellyfin-plugin-lrclib/master/manifest.json
