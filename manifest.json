@@ -1,19 +1,17 @@
 [
     {
-        "guid": "d106ebe6-9ca8-4fbc-9cd1-a92a213da9f9",
+        "guid": "1316cd9a-f417-4aa0-b859-2d50f764f45e",
         "name": "LrcLib",
         "description": "Download lyrics from https://lrclib.net/\n",
         "overview": "Download lyrics from https://lrclib.net/",
-        "owner": "crobibero",
+        "owner": "Felitendo",
         "category": "Notifications",
         "versions": [
             {
                 "version": "1.0.0.0",
                 "changelog": "",
                 "targetAbi": "10.9.0.0",
-                "sourceUrl": "https://github.com/crobibero/jellyfin-plugin-lrclib/releases/download/v1/lrclib_1.0.0.0.zip",
-                "checksum": "95b90f538701a6ead117dc4bdaff5b10",
-                "timestamp": "2024-05-12T00:40:10Z"
+                "sourceUrl": "https://github.com/Felitendo/jellyfin-plugin-lrclib/releases/download/v1/lrclib_1.0.0.0.zip"
             }
         ]
     }
