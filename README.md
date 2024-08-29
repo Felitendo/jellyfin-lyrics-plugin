@@ -19,6 +19,6 @@
 </div>
 
 <div align="center">
-  Plugin Manifest: https://raw.githubusercontent.com/crobibero/jellyfin-plugin-lrclib/master/manifest.json
+  Plugin Manifest: https://raw.githubusercontent.com/Felitendo/jellyfin-plugin-lrclib/master/manifest.json
 </div>
 </p>
