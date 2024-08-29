@@ -11,9 +11,7 @@
                 "version": "1.0.0.0",
                 "changelog": "",
                 "targetAbi": "10.9.0.0",
-                "sourceUrl": "https://github.com/Felitendo/jellyfin-plugin-lrclib/releases/download/v1/lrclib_1.0.0.0.zip",
-                "checksum": "29171b68ef453bbb493810afe6716f4a",
-                "timestamp": "2024-08-29T22:15:47Z"
+                "sourceUrl": "https://github.com/Felitendo/jellyfin-plugin-lrclib/releases/download/v1/lrclib_1.0.0.0.zip"
             }
         ]
     }
