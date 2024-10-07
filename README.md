@@ -54,4 +54,8 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 - Join my [Discord Server](https://dsc.gg/felitendo)
 
 ---
-## FELO
+ _____ _____ _     ___  
+|  ___| ____| |   / _ \ 
+| |_  |  _| | |  | | | |
+|  _| | |___| |__| |_| |
+|_|   |_____|_____\___/ 
