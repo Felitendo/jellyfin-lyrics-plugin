@@ -30,7 +30,7 @@ If lyrics aren't appearing for specific albums:
 ### Common Issues
 - **Lyrics not showing up?** Make sure you've completed all installation steps and refreshed metadata
 - **Missing lyrics for specific songs?** Try manually refreshing the metadata for those items
-- **Plugin not appearing?** Verify your Jellyfin version and repository URL
+- **Plugin not appearing?** Verify your Jellyfin version is 10.9.10 or above
 
 ## 💡 Contributing
 
