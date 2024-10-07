@@ -25,14 +25,6 @@ If lyrics aren't appearing for specific albums:
 2. Right-click
 3. Select "Refresh metadata"
 
-## ⚙️ Configuration
-
-The plugin works out of the box with default settings, but you can customize:
-- Lyrics sources priority
-- Download schedule
-- Display preferences
-- Cache settings
-
 ## 🔍 Troubleshooting
 
 ### Common Issues
