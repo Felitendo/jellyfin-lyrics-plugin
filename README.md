@@ -1,12 +1,12 @@
 # Jellyfin Lyrics Plugin
 
-A plugin for Jellyfin that automatically downloads and displays lyrics for your music library.
+A plugin for Jellyfin that automatically downloads lyrics for your music library.
 
 ## 🎵 Features
 
 - Automatic lyrics download for your entire music library
 - Integrates seamlessly with Jellyfin's music player
-- Supports multiple lyrics sources
+- Downloads Lyrics directly from LrcLib
 - Batch processing for large libraries
 - Real-time lyrics display during playback
 
@@ -46,9 +46,12 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## 📄 License
 
-[MIT License](LICENSE)
+[GNU GPL License](LICENSE)
 
 ## 📞 Support
 
 - Create an [Issue](https://github.com/yourusername/jellyfin-lyrics-plugin/issues)
 - Join my [Discord Server](https://dsc.gg/felitendo)
+
+---
+#FELO
