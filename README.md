@@ -48,14 +48,9 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 [MIT License](LICENSE)
 
-## 🙏 Acknowledgments
-
-- Thanks to the Jellyfin community
-- All lyrics sources and APIs that make this possible
-- Contributors and testers
-
 ## 📞 Support
 
 - Create an [Issue](https://github.com/yourusername/jellyfin-lyrics-plugin/issues)
+- Join my [Discord Server](https://dsc.gg/felitendo)
 
 ---
