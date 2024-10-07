@@ -55,4 +55,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ---
 
-### [Felo](https://felo.gg)
+### Part of [FELO](https://felo.gg)
+
+---
