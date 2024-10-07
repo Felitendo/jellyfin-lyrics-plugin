@@ -44,10 +44,6 @@ The plugin works out of the box with default settings, but you can customize:
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## 📄 License
-
-[GNU GPL License](LICENSE)
-
 ## 📞 Support
 
 - Create an [Issue](https://github.com/yourusername/jellyfin-lyrics-plugin/issues)
