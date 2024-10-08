@@ -2,14 +2,6 @@
 
 A plugin for Jellyfin that automatically downloads lyrics for your music library.
 
-## 🎵 Features
-
-- Automatic lyrics download for your entire music library
-- Integrates seamlessly with Jellyfin's music player
-- Downloads Lyrics directly from LrcLib
-- Batch processing for large libraries
-- Real-time lyrics display during playback
-
 ## 🚀 Installation
 
 1. Ensure your Jellyfin server is updated to version 10.9.10 or above
@@ -18,6 +10,14 @@ A plugin for Jellyfin that automatically downloads lyrics for your music library
 4. Find "LrcLib" under the "Notifications" category and install it
 5. Go to Scheduled Tasks and run "Download missing lyrics"
 6. Scan all libraries to complete the integration
+
+## 🎵 Features
+
+- Automatic lyrics download for your entire music library
+- Integrates seamlessly with Jellyfin's music player
+- Downloads Lyrics directly from LrcLib
+- Batch processing for large libraries
+- Real-time lyrics display during playback
 
 ### 📝 Manual Refresh
 If lyrics aren't appearing for specific albums:
