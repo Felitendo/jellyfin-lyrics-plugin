@@ -45,4 +45,10 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date)](https://star-history.com/#Felitendo/jellyfin-lyrics-plugin&Date)
+<a href="https://star-history.com/#Felitendo/jellyfin-lyrics-plugin&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date" />
+ </picture>
+</a>
