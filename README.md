@@ -1,6 +1,6 @@
 # Jellyfin Lyrics Plugin
 
-A plugin for Jellyfin that automatically downloads the lyrics for the songs in your music library from [LrcLib](https://lrclib.net).
+A plugin for Jellyfin that automatically downloads and applies the lyrics for the songs in your music library from [LrcLib](https://lrclib.net).
 
 ## 🎵 Features
 
