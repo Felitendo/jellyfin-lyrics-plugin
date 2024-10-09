@@ -40,15 +40,3 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 - Create an [Issue](https://github.com/yourusername/jellyfin-lyrics-plugin/issues)
 - Join my [Discord Server](https://dsc.gg/felitendo)
-
----
-
-## Star History
-
-<a href="https://star-history.com/#Felitendo/jellyfin-lyrics-plugin&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Felitendo/jellyfin-lyrics-plugin&type=Date" />
- </picture>
-</a>
