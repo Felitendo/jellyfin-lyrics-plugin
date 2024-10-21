@@ -7,7 +7,6 @@ A plugin for Jellyfin that automatically downloads and applies the lyrics for th
 - Automatic lyrics download for your entire music library
 - Integrates seamlessly with Jellyfin's music player
 - Downloads Lyrics directly from LrcLib
-- Batch processing for large libraries
 - Real-time lyrics display during playback
 
 ## 🚀 Installation
