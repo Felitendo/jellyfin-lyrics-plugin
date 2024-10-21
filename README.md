@@ -11,7 +11,7 @@ A plugin for Jellyfin that automatically downloads and applies the lyrics for th
 
 ## 🚀 Installation
 
-1. Ensure your Jellyfin server is updated to version 10.9.10 or above
+1. Ensure your Jellyfin server is updated to version 10.9.11 or above
 2. Add the plugin repository to Jellyfin: https://raw.githubusercontent.com/Felitendo/jellyfin-lyrics-plugin/master/manifest.json
 3. Navigate to the Plugin Catalog in your Jellyfin dashboard
 4. Find "LrcLib" under the "Notifications" category and install it
@@ -29,7 +29,7 @@ If lyrics aren't appearing for specific albums:
 ### Common Issues
 - **Lyrics not showing up?** Make sure you've completed all installation steps and refreshed metadata
 - **Missing lyrics for specific songs?** Try manually refreshing the metadata for those items
-- **Plugin not appearing?** Verify your Jellyfin version is 10.9.10 or above
+- **Plugin not appearing?** Verify your Jellyfin version is 10.9.11 or above
 
 ## 💡 Contributing
 
