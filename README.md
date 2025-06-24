@@ -21,7 +21,7 @@ A plugin for Jellyfin that automatically downloads and applies the lyrics for th
 5. Go to Scheduled Tasks and run "Download missing lyrics"
 6. Scan all libraries to complete the integration
 
-### 📝 Manual Refresh
+## 📝 Manual Refresh
 
 If lyrics aren't appearing for specific albums:
 1. Navigate to the album
