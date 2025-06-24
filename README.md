@@ -28,8 +28,6 @@ If lyrics aren't appearing for specific albums:
 3. Select "Refresh metadata"
 
 ## 🔍 Troubleshooting
-
-### Common Issues
 - **Plugin not appearing?** Verify your Jellyfin version is 10.9.11 or above
 - **Lyrics not showing up?** Make sure you've completed all installation steps and refreshed metadata
 - **Missing lyrics for specific songs?** Try manually refreshing the metadata for those items
