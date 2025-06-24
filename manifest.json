@@ -5,7 +5,7 @@
         "description": "Download lyrics from https://lrclib.net/\n",
         "overview": "Download lyrics from https://lrclib.net/",
         "owner": "Felitendo",
-        "category": "Notifications",
+        "category": "Metadata",
         "versions": [
             {
                 "version": "1.0.0.0",
