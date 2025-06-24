@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
-using Jellyfin.Plugin.LrcLib.Models;
+using Jellyfin.Plugin.Lyrics.Models;
 using MediaBrowser.Common.Extensions;
 using MediaBrowser.Common.Net;
 using MediaBrowser.Controller.Lyrics;
@@ -17,12 +17,12 @@ using MediaBrowser.Model.Lyrics;
 using MediaBrowser.Model.Providers;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.LrcLib;
+namespace Jellyfin.Plugin.Lyrics;
 
 /// <summary>
-/// Lyric provider for LrcLib.
+/// Lyric provider for Lyrics.
 /// </summary>
-public class LrcLibProvider : ILyricProvider
+public class LyricsProvider : ILyricProvider
 {
     private const string BaseUrl = "https://lrclib.net";
     private const string SyncedSuffix = "synced";
@@ -31,27 +31,27 @@ public class LrcLibProvider : ILyricProvider
     private const string PlainFormat = "txt";
 
     private readonly IHttpClientFactory _httpClientFactory;
-    private readonly ILogger<LrcLibProvider> _logger;
+    private readonly ILogger<LyricsProvider> _logger;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="LrcLibProvider"/> class.
+    /// Initializes a new instance of the <see cref="LyricsProvider"/> class.
     /// </summary>
     /// <param name="httpClientFactory">Instance of the <see cref="IHttpClientFactory"/> interface.</param>
-    /// <param name="logger">Instance of the <see cref="ILogger{LrcLibProvider}"/>.</param>
-    public LrcLibProvider(IHttpClientFactory httpClientFactory, ILogger<LrcLibProvider> logger)
+    /// <param name="logger">Instance of the <see cref="ILogger{LyricsProvider}"/>.</param>
+    public LyricsProvider(IHttpClientFactory httpClientFactory, ILogger<LyricsProvider> logger)
     {
         _httpClientFactory = httpClientFactory;
         _logger = logger;
     }
 
-    private static bool UseStrictSearch => LrcLibPlugin.Instance?.Configuration.UseStrictSearch ?? true;
+    private static bool UseStrictSearch => LyricsPlugin.Instance?.Configuration.UseStrictSearch ?? true;
 
-    private static bool ExcludeArtistName => LrcLibPlugin.Instance?.Configuration.ExcludeArtistName ?? false;
+    private static bool ExcludeArtistName => LyricsPlugin.Instance?.Configuration.ExcludeArtistName ?? false;
 
-    private static bool ExcludeAlbumName => LrcLibPlugin.Instance?.Configuration.ExcludeAlbumName ?? false;
+    private static bool ExcludeAlbumName => LyricsPlugin.Instance?.Configuration.ExcludeAlbumName ?? false;
 
     /// <inheritdoc />
-    public string Name => LrcLibPlugin.Instance!.Name;
+    public string Name => LyricsPlugin.Instance!.Name;
 
     /// <inheritdoc />
     public async Task<IEnumerable<RemoteLyricInfo>> SearchAsync(
@@ -91,7 +91,7 @@ public class LrcLibProvider : ILyricProvider
             };
 
             var response = await _httpClientFactory.CreateClient(NamedClient.Default)
-                .GetFromJsonAsync<LrcLibSearchResponse>(requestUri.Uri, cancellationToken: cancellationToken)
+                .GetFromJsonAsync<LyricsSearchResponse>(requestUri.Uri, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
             if (response is null)
             {
@@ -133,8 +133,8 @@ public class LrcLibProvider : ILyricProvider
     }
 
     private async Task<IEnumerable<RemoteLyricInfo>> GetExactMatch(
-    LyricSearchRequest request,
-    CancellationToken cancellationToken)
+        LyricSearchRequest request,
+        CancellationToken cancellationToken)
     {
         if (string.IsNullOrEmpty(request.SongName))
         {
@@ -183,7 +183,7 @@ public class LrcLibProvider : ILyricProvider
 
         var httpClient = _httpClientFactory.CreateClient(NamedClient.Default);
 
-        var response = await httpClient.GetFromJsonAsync<LrcLibSearchResponse>(requestUri.Uri, cancellationToken: cancellationToken).ConfigureAwait(false);
+        var response = await httpClient.GetFromJsonAsync<LyricsSearchResponse>(requestUri.Uri, cancellationToken: cancellationToken).ConfigureAwait(false);
         if (response is null)
         {
             return Enumerable.Empty<RemoteLyricInfo>();
@@ -246,7 +246,7 @@ public class LrcLibProvider : ILyricProvider
 
         var httpClient = _httpClientFactory.CreateClient(NamedClient.Default);
 
-        var response = await httpClient.GetFromJsonAsync<IReadOnlyList<LrcLibSearchResponse>>(requestUri.Uri, cancellationToken: cancellationToken).ConfigureAwait(false);
+        var response = await httpClient.GetFromJsonAsync<IReadOnlyList<LyricsSearchResponse>>(requestUri.Uri, cancellationToken: cancellationToken).ConfigureAwait(false);
         if (response is null)
         {
             return Enumerable.Empty<RemoteLyricInfo>();
@@ -263,7 +263,7 @@ public class LrcLibProvider : ILyricProvider
         return sortedResults;
     }
 
-    private List<RemoteLyricInfo> GetRemoteLyrics(LrcLibSearchResponse response)
+    private List<RemoteLyricInfo> GetRemoteLyrics(LyricsSearchResponse response)
     {
         var results = new List<RemoteLyricInfo>();
 

@@ -1,14 +1,14 @@
 using System.Text.Json.Serialization;
 
-namespace Jellyfin.Plugin.LrcLib.Models;
+namespace Jellyfin.Plugin.Lyrics.Models;
 
 /// <summary>
 /// Response model.
 /// </summary>
-public class LrcLibSearchResponse
+public class LyricsSearchResponse
 {
     /// <summary>
-    /// Gets or sets the lrclib id.
+    /// Gets or sets the lyrics id.
     /// </summary>
     [JsonPropertyName("id")]
     public long Id { get; set; }

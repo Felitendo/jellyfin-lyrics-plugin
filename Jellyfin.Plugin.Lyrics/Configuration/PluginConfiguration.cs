@@ -1,9 +1,9 @@
-﻿using MediaBrowser.Model.Plugins;
+using MediaBrowser.Model.Plugins;
 
-namespace Jellyfin.Plugin.LrcLib.Configuration
+namespace Jellyfin.Plugin.Lyrics.Configuration
 {
     /// <summary>
-    /// Configuration for tvdb.
+    /// Configuration for lyrics plugin.
     /// </summary>
     public class PluginConfiguration : BasePluginConfiguration
     {

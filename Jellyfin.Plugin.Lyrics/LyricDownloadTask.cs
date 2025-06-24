@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -14,7 +14,7 @@ using MediaBrowser.Model.Globalization;
 using MediaBrowser.Model.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.LrcLib;
+namespace Jellyfin.Plugin.Lyrics;
 
 /// <summary>
 /// Task to download lyrics.
@@ -56,7 +56,7 @@ public class LyricDownloadTask : IScheduledTask
     public string Name => "Download missing lyrics";
 
     /// <inheritdoc />
-    public string Key => "DownloadLrcLibLyrics";
+    public string Key => "DownloadLyrics";
 
     /// <inheritdoc />
     public string Description => "Task to download missing lyrics";

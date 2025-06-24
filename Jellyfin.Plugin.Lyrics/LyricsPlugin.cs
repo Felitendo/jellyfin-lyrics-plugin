@@ -1,31 +1,31 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using Jellyfin.Plugin.LrcLib.Configuration;
+using Jellyfin.Plugin.Lyrics.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
-namespace Jellyfin.Plugin.LrcLib;
+namespace Jellyfin.Plugin.Lyrics;
 
 /// <summary>
-/// LrcLib plugin.
+/// Lyrics plugin.
 /// </summary>
-public class LrcLibPlugin : BasePlugin<PluginConfiguration>, IHasWebPages
+public class LyricsPlugin : BasePlugin<PluginConfiguration>, IHasWebPages
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="LrcLibPlugin"/> class.
+    /// Initializes a new instance of the <see cref="LyricsPlugin"/> class.
     /// </summary>
     /// <param name="applicationPaths">Instance of the <see cref="IApplicationPaths"/>.</param>
     /// <param name="xmlSerializer">Instance of the <see cref="IXmlSerializer"/>.</param>
-    public LrcLibPlugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+    public LyricsPlugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
         : base(applicationPaths, xmlSerializer)
     {
         Instance = this;
     }
 
     /// <inheritdoc />
-    public override string Name => "LrcLib";
+    public override string Name => "Lyrics";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("D106EBE6-9CA8-4FBC-9CD1-A92A213DA9F9");
@@ -33,7 +33,7 @@ public class LrcLibPlugin : BasePlugin<PluginConfiguration>, IHasWebPages
     /// <summary>
     /// Gets the current plugin instance.
     /// </summary>
-    public static LrcLibPlugin? Instance { get; private set; }
+    public static LyricsPlugin? Instance { get; private set; }
 
     /// <inheritdoc />
     public IEnumerable<PluginPageInfo> GetPages()

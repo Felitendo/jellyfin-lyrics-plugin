@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>LrcLib</title>
+    <title>Lyrics</title>
 </head>
 <body>
-    <div id="lrclibConfigurationPage" data-role="page" class="page type-interior pluginConfigurationPage">
+    <div id="lyricsConfigurationPage" data-role="page" class="page type-interior pluginConfigurationPage">
         <div data-role="content">
             <div class="content-primary">
                 <form class="gotifyConfigurationForm">
                     <div class="verticalSection verticalSection-extrabottompadding">
                         <div class="sectionTitleContainer flex align-items-center">
-                            <h2 class="sectionTitle">LrcLib Settings:</h2>
+                            <h2 class="sectionTitle">Lyrics Settings:</h2>
                         </div>
                         <label class="checkboxContainer">
                             <input is="emby-checkbox" type="checkbox" id="useStrictSearch" />
@@ -35,13 +35,13 @@
             </div>
         </div>
         <script type="text/javascript">
-        var LrcLibPluginConfiguration = {
+        var LyricsPluginConfiguration = {
             uniquePluginId: "d106ebe6-9ca8-4fbc-9cd1-a92a213da9f9",
 
             loadConfiguration: function () {
                 Dashboard.showLoadingMsg();
 
-                ApiClient.getPluginConfiguration(LrcLibPluginConfiguration.uniquePluginId).then(function (config) {
+                ApiClient.getPluginConfiguration(LyricsPluginConfiguration.uniquePluginId).then(function (config) {
                     document.querySelector('#useStrictSearch').checked = config.UseStrictSearch;
 
                     if (config.UseStrictSearch) {
@@ -57,26 +57,26 @@
 
             saveConfiguration: function () {
                 Dashboard.showLoadingMsg();
-                ApiClient.getPluginConfiguration(LrcLibPluginConfiguration.uniquePluginId).then(function (config) {
+                ApiClient.getPluginConfiguration(LyricsPluginConfiguration.uniquePluginId).then(function (config) {
 
                     config.UseStrictSearch = document.querySelector('#useStrictSearch').checked;
                     config.ExcludeArtistName = document.querySelector('#excludeArtistName').checked;
                     config.ExcludeAlbumName = document.querySelector('#excludeAlbumName').checked;
 
-                    ApiClient.updatePluginConfiguration(LrcLibPluginConfiguration.uniquePluginId, config).then(function (result) {
+                    ApiClient.updatePluginConfiguration(LyricsPluginConfiguration.uniquePluginId, config).then(function (result) {
                         Dashboard.processPluginConfigurationUpdateResult(result);
                     });
                 });
             },
         };
 
-        document.getElementById('lrclibConfigurationPage').addEventListener('pageshow', function () {
-            LrcLibPluginConfiguration.loadConfiguration();
+        document.getElementById('lyricsConfigurationPage').addEventListener('pageshow', function () {
+            LyricsPluginConfiguration.loadConfiguration();
         });
 
-        document.getElementById('lrclibConfigurationPage').addEventListener('submit', function (e) {
+        document.getElementById('lyricsConfigurationPage').addEventListener('submit', function (e) {
             e.preventDefault();
-            LrcLibPluginConfiguration.saveConfiguration();
+            LyricsPluginConfiguration.saveConfiguration();
         });
 
         document.getElementById('useStrictSearch').addEventListener('change', function () {
