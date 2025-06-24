@@ -22,12 +22,14 @@ A plugin for Jellyfin that automatically downloads and applies the lyrics for th
 6. Scan all libraries to complete the integration
 
 ### 📝 Manual Refresh
+
 If lyrics aren't appearing for specific albums:
 1. Navigate to the album
 2. Right-click
 3. Select "Refresh metadata"
 
 ## 🔍 Troubleshooting
+
 - **Plugin not appearing?** Verify your Jellyfin version is 10.9.11 or above
 - **Lyrics not showing up?** Make sure you've completed all installation steps and refreshed metadata
 - **Missing lyrics for specific songs?** Try manually refreshing the metadata for those items
